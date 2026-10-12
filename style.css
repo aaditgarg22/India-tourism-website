@@ -1,0 +1,384 @@
+
+/* General page styling */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #17345c;
+    background-color: #f8fafc;
+    line-height: 1.6;
+}
+
+h1, h2 {
+    color: #12315d;
+}
+
+h1 {
+    margin-bottom: 10px;
+}
+
+/* Header */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    padding: 12px 4%;
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo img {
+    width: 65px;
+    height: 65px;
+    object-fit: contain;
+}
+
+.search-box {
+    flex: 1;
+    max-width: 420px;
+}
+
+.search-box form {
+    display: flex;
+    border: 1px solid #b9cbe0;
+    border-radius: 25px;
+    overflow: hidden;
+}
+
+.search-box input {
+    width: 100%;
+    min-width: 0;
+    padding: 12px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+}
+
+.search-box button {
+    padding: 12px 20px;
+    border: none;
+    background-color: #17345c;
+    color: white;
+    cursor: pointer;
+}
+
+.search-box button:hover {
+    background-color: #ed8b23;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
+nav a {
+    color: #17345c;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: #ed8b23;
+}
+
+/* Hero section */
+.hero {
+    padding: 45px 7%;
+    min-height: 200px;
+    background-image:
+        linear-gradient(90deg, rgba(255,255,255,0.7), transparent),
+        url("attached pictures/bg-hero.jpg ");
+    background-size: cover;
+    background-position: center;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin: 0;
+}
+
+.hero p {
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 0;
+}
+
+/* About section */
+.about {
+    padding: 25px 6%;
+    background-color: white;
+}
+
+.about p {
+    max-width: 850px;
+}
+
+/* Common section headings */
+main > hr {
+    border: none;
+    border-top: 1px solid #d8e0eb;
+}
+
+/* Destination section background */
+.destinations {
+    padding: 25px 4% 35px;
+
+    background-image:
+        linear-gradient(
+            rgba(255, 255, 255, 0.32),
+            rgba(255, 255, 255, 0.32)
+        ),
+        url("attached pictures/india-map.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.destinations > h1 {
+    font-size: 34px;
+    margin: 0 0 20px;
+}
+
+/* Flexbox layout for destination cards */
+.destination-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    gap: 20px;
+    flex-direction: row;
+}
+
+/* Individual destination box */
+.destination-card {
+    flex: 1 1 250px;
+    max-width: 300px;
+    min-width: 0;
+    padding: 12px;
+    background-color: rgba(255, 255, 255, 0.96);
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s;
+}
+
+.destination-card:hover {
+    transform: translateY(-5px);
+}
+
+.destination-card img {
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.destination-card h2 {
+    font-size: 22px;
+    margin: 8px 0;
+}
+
+.destination-card p {
+    font-size: 14px;
+    margin: 8px 0;
+}
+
+.destination-card .fact {
+    padding: 12px;
+    background-color: #e8f2fc;
+    border-radius: 8px;
+}
+
+/* Travel packages */
+.packages {
+    padding: 25px 5%;
+}
+
+.packages h1 {
+    font-size: 30px;
+}
+
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    border: 1px solid #cbd8e8;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border: 1px solid #d5dfeb;
+}
+
+th {
+    background-color: #dcecff;
+    color: #12315d;
+}
+
+tr:hover {
+    background-color: #f0f6ff;
+}
+
+/* Things to carry and travel tips */
+.travel-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 10px 5% 30px;
+}
+
+.carry, .tips {
+    flex: 1 1 300px;
+}
+
+.travel-info h1 {
+    font-size: 26px;
+}
+
+.travel-info li {
+    padding: 5px 0;
+}
+
+.carry ul, .tips ol {
+    padding-left: 25px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 12px;
+    color: white;
+    background-color: #17345c;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Tablet and mobile screens */
+@media (max-width: 900px) {
+    .header {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .search-box {
+        order: 2;
+        flex: 1 1 300px;
+    }
+
+    nav {
+        order: 3;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .destination-card {
+        flex-basis: 220px;
+    }
+
+    .destinations {
+        background-attachment: scroll;
+    }
+}
+
+/* Small mobile screens */
+@media (max-width: 500px) {
+    .header {
+        gap: 12px;
+        padding: 12px;
+    }
+
+    .logo img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .search-box {
+        flex-basis: 100%;
+    }
+
+    .search-box button {
+        padding: 10px 12px;
+    }
+
+    nav {
+        gap: 12px;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+
+    .hero {
+        min-height: 180px;
+        padding: 35px 5%;
+        background-position: center;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .hero p {
+        font-size: 17px;
+    }
+
+    .about {
+        padding: 20px;
+    }
+
+    .destinations {
+        padding: 20px 15px;
+    }
+
+    .destinations > h1 {
+        font-size: 26px;
+    }
+
+    .destination-container {
+        gap: 15px;
+    }
+
+    .destination-card {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    .destination-card img {
+        height: 210px;
+    }
+
+    .packages {
+        padding: 20px 12px;
+    }
+
+    th, td {
+        padding: 9px;
+        font-size: 13px;
+    }
+
+    .travel-info {
+        padding: 10px 20px 25px;
+    }
+}
